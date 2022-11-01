@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello from the HTML</h1>
+    <div id="content"></div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        axios.get('/phrases')
+        .then(function (response) {
+            // handle success
+            console.log(response);
+            const phrases = response.data;
+            const content = document.getElementById('content');
+            phrases.map(phrase => {
+                const paragraph = document.createElement("p");
+                const text = document.createTextNode(phrase);
+                paragraph.appendChild(text);
+                content.appendChild(paragraph);
+            })
+        })
+    </script>
+</body>
+</html>
