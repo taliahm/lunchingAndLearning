@@ -19,6 +19,13 @@ A computer that is always running that knows how to handle requests from other c
 </details>
 
 ## Code Along
+Setup steps:
+- Clone this repo
+- `npm install`
+- In your terminal run `node server.js`
+
+We will be coding in `server.js` and `index.html`. The final code is in `server-end.js` and `completed.html`. 
+
 There is no hot reloading! You have to kill the server and restart if you want your changes to appear:
 In your terminal:
 - `ctrl + c` (kills the server)
@@ -27,7 +34,7 @@ In your terminal:
 Tech used:
 - Node
 - Express JS, a framework on top of Node
-- Axios
+- Axios (using a CDN in index.html)
 - HTML/CSS!
 
 ## Resources
